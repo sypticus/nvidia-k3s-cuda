@@ -180,3 +180,39 @@ spec:
     - name: NVIDIA_DRIVER_CAPABILITIES 
     value: "all"
 ```
+
+
+### Test it out
+Download the attached `test-nvidia-gpu-pod.yaml`
+
+```commandline
+kubectl apply -f test-nvidia-gpu-pod.yaml
+```
+
+This should start up a pod, the logs of which should show a successful nvidia-smi call.
+
+```commandline
+kubectl logs nvidia-test-pod
+
+
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 3060 Ti     On  |   00000000:02:00.0 Off |                  N/A |
+|  0%   55C    P8             19W /  200W |       2MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+
+```
