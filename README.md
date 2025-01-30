@@ -7,6 +7,7 @@ These instructions assume you have a K3S cluster already deployed. For help sett
 
 It is also assumed that you are using a Debian-based OS on the host which has the GPU(s), and that you have sudo access
 
+//TODO: Add k8s-device-plugin
 
 ## Host Setup
 Each host with GPU resources needs to have the Cuda drivers.
