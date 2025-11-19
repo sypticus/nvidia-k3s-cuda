@@ -108,7 +108,7 @@ sudo systemctl restart k3s-agent.service
 Once it has restarted, confirm the config.toml has been updated:
 
 ```Console
-sudo grep nvidia /var/lib/rancher/k3s/agent/etc/containerd/config.toml"
+sudo grep nvidia /var/lib/rancher/k3s/agent/etc/containerd/config.toml
 ```
 
 ```Console
