@@ -44,8 +44,10 @@ sudo apt-get update
 sudo apt-get install cuda-drivers
 ```
 
-
-At this point you should reboot the host.
+You need to reboot now for the device to show up.
+```
+sudo reboot now
+```
 
 ### Confirm the drivers were successful
 
